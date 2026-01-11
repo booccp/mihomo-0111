@@ -27,12 +27,13 @@ jobs:
         go install golang.org/x/mobile/cmd/gomobile@latest
         $HOME/go/bin/gomobile init
         mkdir -p build
+        cd bind/mobile
         $HOME/go/bin/gomobile bind -v \
-          -o build/mihomo.aar \
+          -o ../../build/mihomo.aar \
           -target=android/arm64 \
           -androidapi=29 \
           -javapkg io.github.booccp.mihomo \
-          github.com/metacubex/mihomo/bind/mobile
+          .
         
     - uses: actions/upload-artifact@v4
       with:
