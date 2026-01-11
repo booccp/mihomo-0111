@@ -32,7 +32,7 @@ jobs:
           -target=android/arm64 \
           -androidapi=29 \
           -javapkg io.github.booccp.mihomo \
-          github.com/booccp/mihomo-0111/bind/mobile
+          github.com/metacubex/mihomo/bind/mobile
         
     - uses: actions/upload-artifact@v4
       with:
